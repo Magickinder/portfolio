@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="overlay">
+        <div class="window">
+            <h2>Flashcards</h2>
+            <p>
+                You can see the project at the following link: <a href="" id="project-link"></a>
+            </p>
+            <p>
+                I did this project when I was studying the frontend on HyperSkill.
+                I created a web page with flip-down flash cards, learned some HTML
+                basics and learned that CSS can easily make a beautiful design.
+            </p>
+            <button onclick="hideModal()">Close</button>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="nav-content-container">
+                <a href="#" class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="x-left"></span>
+                    <span class="x-right"></span>
+                </a>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#about">About me</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contacts">Contacts</a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Jane Doe,<br>Front-end developer</h1>
+    </header>
+    <section id="about">
+        <div class="about-left">
+            <img src="images/image.jpg" alt="keyboard" id="keyboard-image" />
+            <img src="images/person.jpg" alt="person" id="person-image" />
+        </div>
+        <div class="about-right">
+            <h2>About me</h2>
+            <p>
+                Hi I'm Jane Doe. I've been a junior front-end developer for 5 months now.
+                For me, programming is not just a job. It's a hobby.
+                <br>
+                I'm open to new knowledge, I like to study new technologies and apply them
+                in practice.
+                <br>
+                <b>Skills:</b> HTML, CSS, JS, React.
+            </p>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>PORTFOLIO</h2>
+        <div class="portfolio-projects-container">
+            <div class="portfolio-project-1">
+                <img src="images/project1.png" alt="project1_image" />
+                <p>Flashcards</p>
+                <button class="open-window" onclick="showModal('flashcards')">More info</button>
+            </div>
+            <div class="portfolio-project-2">
+                <img src="images/project2.png" alt="project1_image" />
+                <p>Virtual piano</p>
+                <button class="open-window" onclick="showModal('virtual piano')">More info</button>
+            </div>
+        </div>
+    </section>
+    <section id="contacts">
+        <h2>CONTACTS</h2>
+        <p>
+            You can contact me at <a href="mailto:">test@hyperskill.org</a><br>
+            or phone number - <a href="tel:">12345678910</a>
+        </p>
+        <div class="contacts-images-container">
+            <img src="images/github.svg" alt="github" />
+            <img src="images/facebook.svg" alt="facebook" />
+            <img src="images/twitter.svg" alt="twitter" />
+            <img src="images/instagram%201.svg" alt="instagram" />
+        </div>
+    </section>
+    <footer>
+        <h2>JANE DOE</h2>
+        <p>2022</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

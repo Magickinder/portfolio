@@ -1,0 +1,353 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", serif;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128,128,128,0.5);
+    display: none;
+    z-index: 5;
+}
+
+.window {
+    display: none;
+    z-index: 5;
+    border: 0.2rem solid black;
+    border-radius: 0.1rem;
+    width: 30%;
+    height: 30%;
+    color: black;
+    background-color: #ffffff;
+    position: fixed;
+    left: 35%;
+    top: 30%;
+}
+
+.window > h2 {
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.window > p {
+    text-align: center;
+    padding: 0 1rem 0 1rem;
+}
+
+.window > button {
+    border: none;
+    border-radius: 0.2rem;
+    width: 15%;
+    height: 15%;
+    transition: 0.5s;
+}
+
+.window > button:hover {
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+header {
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+header > nav {
+    background-color: #1e1010;
+    height: 8%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header > nav > .nav-content-container {
+    width: 19%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header > nav > .nav-content-container > .hamburger {
+    position: absolute;
+    top: 1%;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.5rem;
+}
+
+header > nav > .nav-content-container > .hamburger > .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+header nav .nav-content-container .hamburger .x-left {
+    display: none;
+    position: relative;
+    top: .6rem;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transform: rotate(45deg);
+}
+
+header nav .nav-content-container .hamburger .x-right {
+    display: none;
+    position: relative;
+    bottom: .65rem;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+}
+
+header > nav > .nav-content-container > .nav-links {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+header > nav > .nav-content-container > ul > li {
+    width: 25%;
+    height: 100%;
+    margin-right: 1rem;
+}
+
+header > nav > .nav-content-container > ul > li > a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+}
+
+header > nav > .nav-content-container > ul > li:nth-child(4) {
+    margin-right: 0;
+}
+
+header > nav > .nav-content-container > ul > li > a:hover {
+    background-color: #ccd0d4;
+    color: black;
+    transition: 0.5s;
+}
+
+header > h1 {
+    position: absolute;
+    font-size: 3rem;
+    top: 33rem;
+    left: 17rem;
+}
+
+#about {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#cbd0d3, #f3f5f8);
+}
+
+#about > .about-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#about #keyboard-image {
+    width: 35rem;
+    height: 25rem;
+}
+
+#about #person-image {
+    left: 32rem;
+    top: 12rem;
+    position: absolute;
+    width: 20rem;
+    height: 25rem;
+}
+
+#about > .about-right {
+    color: black;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about > .about-right > h2 {
+    font-size: 3rem;
+    margin-left: 2rem;
+    font-weight: normal;
+}
+
+#about > .about-right > p {
+    width: 40%;
+    font-size: 1.1rem;
+}
+
+#portfolio {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#f3f5f8, #ffffff);
+}
+
+#portfolio img {
+    width: 40rem;
+}
+
+#portfolio > h2 {
+    color: black;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+#portfolio > .portfolio-projects-container {
+    display: flex;
+}
+
+#portfolio > .portfolio-projects-container > .portfolio-project-1 {
+    margin-right: 1rem;
+}
+
+#portfolio > .portfolio-projects-container p {
+    color: black;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0;
+    height: 5vh;
+}
+
+#portfolio > .portfolio-projects-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio > .portfolio-projects-container > div > .open-window {
+    margin-top: 1rem;
+    width: 15%;
+    height: 10%;
+    border-radius: 0.2rem;
+    transition: 0.5s;
+    background-color: #ffffff;
+    color: black;
+}
+
+#portfolio > .portfolio-projects-container > div > .open-window:hover,
+.close:focus {
+    box-shadow:
+            inset -3.5em 0 0 0 black,
+            inset 3.5em 0 0 0 black;
+    color: white;
+}
+
+#contacts {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: #ffffff;
+}
+
+#contacts > h2 {
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+#contacts > p {
+    text-align: center;
+}
+
+#contacts > .contacts-images-container > img {
+    margin-right: 0.8rem;
+}
+
+#contacts > .contacts-images-container > img:nth-child(4) {
+    margin-right: 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1010;
+}
+
+footer > h2 {
+    font-weight: normal;
+    margin: 1rem 0 0 0;
+}
+
+footer > p {
+    margin: 0.2rem 0 1rem 0;
+}
+
+@media (max-width: 1000px) {
+    header {
+        height: 50vh;
+    }
+
+    header > nav {
+        height: 6%;
+    }
+
+    header nav .nav-content-container .hamburger {
+        display: flex;
+    }
+
+    header nav .nav-content-container {
+        width: 50%;
+        margin-left: 5rem;
+    }
+
+    header nav .nav-content-container .nav-links {
+        display: none;
+    }
+
+    header nav .nav-content-container .nav-links li {
+        margin-right: 0;
+    }
+}
